@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+:root {
+  --Cool-gray: hsl(231, 11%, 63%);
+  --Light-gray: hsl(229, 24%, 87%);
+  --Magnolia: hsl(217, 100%, 97%);
+  --Alabaster: hsl(231, 100%, 99%);
+  --White: hsl(0, 0%, 100%);
+  --Marine-blue: hsl(213, 96%, 18%);
+  --Purplish-blue: hsl(243, 100%, 62%);
+  --Pastel-blue: hsl(228, 100%, 84%);
+  --Light-blue: hsl(206, 94%, 87%);
+  --Strawberry-red: hsl(354, 84%, 57%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--BG, #eff5ff);
+}
+
+main {
+  display: flex;
+  width: 58.75rem;
+  height: 37.5rem;
+  flex-shrink: 0;
+  border-radius: 0.9375rem;
+  padding: 1rem;
+  background: var(--White, #fff);
+  box-shadow: 0px 25px 40px -20px rgba(0, 0, 0, 0.1);
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  width: 17.125rem;
+  height: 35.5rem;
+  flex-shrink: 0;
+  border-radius: 0.625rem;
+  padding: 2rem;
+  gap: 1.94rem;
+  background: url(./assets/images/bg-sidebar-desktop.svg),
+    var(--Purplish-blue, hsl(243, 100%, 62%));
+}
+
+.steps {
+  display: flex;
+  gap: 1rem;
+}
+
+.stepNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.0625rem;
+  height: 2.0625rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid var(--White, #fff);
+}
+
+h1 {
+  color: var(--Light-Blue, #abbcff);
+  font-feature-settings: "clig" off, "liga" off;
+
+  /* Body (S) */
+  font-family: Ubuntu;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+h2 {
+  color: var(--White, #fff);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+p {
+  color: var(--White, #fff);
+  font-family: Ubuntu;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.0625rem;
+  text-transform: uppercase;
+}
+
+.stepInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 5.25rem 1rem 5.25rem;
+}
+
+.attribution {
+  padding-top: 10px;
+  font-size: 10px;
+  text-align: center;
+  color: #242d44;
+  font-family: "Ubuntu", sans-serif;
+}
+
+a:link {
+  color: #242d44;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #242d44;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #a2b2e1;
+  text-decoration: underline;
+}
