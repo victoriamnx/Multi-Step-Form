@@ -29,7 +29,7 @@ body {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background: var(--BG, #eff5ff);
+  background: var(--Magnolia, hsl(217, 100%, 97%));
 }
 
 main {
@@ -39,7 +39,7 @@ main {
   flex-shrink: 0;
   border-radius: 0.9375rem;
   padding: 1rem;
-  background: var(--White, #fff);
+  background: var(--White, hsl(0, 0%, 100%));
   box-shadow: 0px 25px 40px -20px rgba(0, 0, 0, 0.1);
 }
 
@@ -73,11 +73,9 @@ main {
 }
 
 h1 {
-  color: var(--Light-Blue, #abbcff);
-  font-feature-settings: "clig" off, "liga" off;
-
+  color: var(--Pastel-blue, hsl(228, 100%, 84%));
   /* Body (S) */
-  font-family: Ubuntu;
+  font-family: "Ubuntu", sans-serif;
   font-size: 0.75rem;
   font-style: normal;
   font-weight: 400;
@@ -93,7 +91,7 @@ h2 {
 
 p {
   color: var(--White, #fff);
-  font-family: Ubuntu;
+  font-family: "Ubuntu", sans-serif;
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 700;
@@ -109,26 +107,106 @@ p {
 }
 
 .right-section {
-    display: flex;
-    flex-direction: column;
-    padding: 2.5rem 5.25rem 1rem 5.25rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 5.25rem 1rem 5.25rem;
+  justify-content: space-between;
+}
+
+.right-section h1 {
+  color: var(--Marine-blue, hsl(213, 96%, 18%));
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.right-section p {
+  color: var(--Grey, #9699aa);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5625rem;
+  text-transform: none;
+  margin-top: 0.69rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.19rem;
+}
+
+.formLabel {
+  color: var(--Marine-blue, #022959);
+
+  /* Body (M) */
+  font-family: "Ubuntu", sans-serif;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+input {
+  width: 28.125rem;
+  height: 3rem;
+  flex-shrink: 0;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--Border-Color, #d6d9e6);
+  background: var(--White, #fff);
+}
+
+::placeholder {
+  color: var(--Grey, #9699aa);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5625rem; /* 156.25% */
+}
+
+.btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  width: 7.6875rem;
+  height: 3rem;
+  flex-shrink: 0;
+  border-radius: 0.5rem;
+  background: var(--Marine-blue, #022959);
+  border: none;
+  color: var(--White, #fff);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .attribution {
   padding-top: 10px;
   font-size: 10px;
   text-align: center;
-  color: #242d44;
+  color: #022959;
   font-family: "Ubuntu", sans-serif;
 }
 
 a:link {
-  color: #242d44;
+  color: #022959;
   text-decoration: none;
 }
 
 a:visited {
-  color: #242d44;
+  color: #022959;
   text-decoration: none;
 }
 
