@@ -142,12 +142,10 @@ form {
 
 .formLabel {
   color: var(--Marine-blue, #022959);
-
-  /* Body (M) */
   font-family: "Ubuntu", sans-serif;
   font-size: 0.875rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: normal;
 }
 
@@ -161,6 +159,11 @@ input {
   margin-bottom: 1.5rem;
   border: 1px solid var(--Border-Color, #d6d9e6);
   background: var(--White, #fff);
+  outline: none;
+}
+
+input:hover {
+  outline: 1px solid var(--Purple, #483eff);
 }
 
 ::placeholder {
@@ -190,6 +193,26 @@ button {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+}
+
+button:hover {
+  transition: 0.9s;
+  background: #164a8a;
+}
+
+.plans {
+  display: flex;
+  gap: 1.12rem;
+  margin-top: 2.19rem;
+}
+
+.plan {
+  width: 8.625rem;
+  height: 11.4375rem;
+  flex-shrink: 0;
+  border-radius: 0.5rem;
+  border: 1px solid var(--Border-Color, #d6d9e6);
+  background: var(--White, #fff);
 }
 
 .attribution {
