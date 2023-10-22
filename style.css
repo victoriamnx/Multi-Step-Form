@@ -43,6 +43,8 @@ main {
   box-shadow: 0px 25px 40px -20px rgba(0, 0, 0, 0.1);
 }
 
+/* Steps start */
+
 .left-section {
   display: flex;
   flex-direction: column;
@@ -72,9 +74,21 @@ main {
   border: 1px solid var(--White, #fff);
 }
 
-h1 {
+.stepNumber h2 {
+  color: var(--White, #fff);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.stepInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stepInfo h1 {
   color: var(--Pastel-blue, hsl(228, 100%, 84%));
-  /* Body (S) */
   font-family: "Ubuntu", sans-serif;
   font-size: 0.75rem;
   font-style: normal;
@@ -82,13 +96,7 @@ h1 {
   line-height: normal;
 }
 
-h2 {
-  color: var(--White, #fff);
-  font-family: "Ubuntu", sans-serif;
-  font-size: 0.875rem;
-  font-weight: 700;
-}
-
+.stepInfo p,
 p {
   color: var(--White, #fff);
   font-family: "Ubuntu", sans-serif;
@@ -98,22 +106,32 @@ p {
   line-height: normal;
   letter-spacing: 0.0625rem;
   text-transform: uppercase;
+  margin-top: 0.69rem;
 }
 
-.stepInfo {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
+.stepInfo p {
+  margin-top: 0;
 }
 
-.right-section {
+/* Steps end */
+
+/* Personal info start */
+
+.personalInfo,
+.pickAddOns,
+.summary,
+.thankYou {
   display: flex;
   flex-direction: column;
   padding: 2.5rem 5.25rem 1rem 5.25rem;
   justify-content: space-between;
 }
 
-.right-section h1 {
+.personalInfo h1,
+.summary h1,
+.thankYou h1,
+.selectPlan h1,
+.pickAddOns h1 {
   color: var(--Marine-blue, hsl(213, 96%, 18%));
   font-family: "Ubuntu", sans-serif;
   font-size: 2rem;
@@ -122,7 +140,11 @@ p {
   line-height: normal;
 }
 
-.right-section p {
+.personalInfo p,
+.summary p,
+.thankYou p,
+.selectPlan p,
+.pickAddOns p {
   color: var(--Grey, #9699aa);
   font-family: "Ubuntu", sans-serif;
   font-size: 1rem;
@@ -133,6 +155,8 @@ p {
   text-transform: none;
   margin-top: 0.69rem;
 }
+
+/* Form start */
 
 form {
   display: flex;
@@ -160,6 +184,12 @@ input {
   border: 1px solid var(--Border-Color, #d6d9e6);
   background: var(--White, #fff);
   outline: none;
+  color: var(--Denim, #022959);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 input:hover {
@@ -175,18 +205,40 @@ input:hover {
   line-height: 1.5625rem; /* 156.25% */
 }
 
-.btn {
-  display: flex;
-  justify-content: flex-end;
+.form span {
+  display: none;
+  position: relative;
+  top: -94px;
+  left: 201px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+  font-size: 0.875rem;
+  font-family: "Ubuntu", sans-serif;
+  color: var(--Red-Errors, #ee374a);
 }
 
-button {
+/* Form end */
+
+/* Personal info end */
+
+/* Buttons Config - start*/
+.btn {
+  display: flex;
+  justify-content: space-between;
+  width: 28.125rem;
+  height: 3rem;
+  flex-shrink: 0;
+}
+
+.next {
   width: 7.6875rem;
   height: 3rem;
   flex-shrink: 0;
   border-radius: 0.5rem;
   background: var(--Marine-blue, #022959);
   border: none;
+  cursor: pointer;
   color: var(--White, #fff);
   font-family: "Ubuntu", sans-serif;
   font-size: 1rem;
@@ -195,24 +247,455 @@ button {
   line-height: normal;
 }
 
-button:hover {
+.next:hover {
   transition: 0.9s;
   background: #164a8a;
 }
 
-.plans {
+#goBack {
   display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 0;
+  background: var(--White, hsl(0, 0%, 100%));
+  border: none;
+  color: var(--Grey, #9699aa);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+}
+
+#goBack:hover {
+  transition: 0.9s;
+  color: var(--Denim, #022959);
+  font-family: Ubuntu;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+#changePlan {
+  width: 3rem;
+  height: 1.25rem;
+  background: transparent;
+  color: var(--Grey, #9699aa);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  cursor: pointer;
+  line-height: 1.25rem; /* 142.857% */
+  text-decoration-line: underline;
+  margin-top: 0.44rem;
+  border: none;
+}
+
+#changePlan:hover {
+  transition: 0.9s;
+  color: var(--Purple, #483eff);
+}
+
+#confirmBtn {
+  width: 7.6875rem;
+  height: 3rem;
+  flex-shrink: 0;
+  border-radius: 0.5rem;
+  background: var(--Purple, #483eff);
+  color: var(--White, #fff);
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  cursor: pointer;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: none;
+}
+
+#confirmBtn:hover {
+  transition: 0.9s;
+  background: #928cff;
+}
+
+/* Buttons Config End */
+
+/* Select plan start */
+
+.selectPlan {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.5rem 5.25rem 1rem 5.25rem;
+}
+
+.plans {
   gap: 1.12rem;
+  display: flex;
   margin-top: 2.19rem;
 }
 
 .plan {
-  width: 8.625rem;
-  height: 11.4375rem;
+  display: flex;
   flex-shrink: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 8.625rem;
+  cursor: pointer;
+  height: 11.4375rem;
   border-radius: 0.5rem;
-  border: 1px solid var(--Border-Color, #d6d9e6);
   background: var(--White, #fff);
+  padding: 1.25rem 1rem 1.25rem 1rem;
+  border: 1px solid var(--Border-Color, #d6d9e6);
+}
+
+.plan:hover {
+  transition: 0.8s;
+  border-radius: 0.5rem;
+  border: 1px solid var(--Purple, #483eff);
+}
+
+.plan h1,
+.chosenPlan h2 {
+  color: var(--Denim, #022959);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.plan p {
+  color: var(--Grey, #9699aa);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.plan input[type="radio"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.billing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  height: 3rem;
+  width: 28.125rem;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  background: var(--Very-Light-Grey, #f8f9ff);
+}
+
+.billing h1 {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: normal;
+  color: var(--Denim, #022959);
+  font-family: "Ubuntu", sans-serif;
+}
+
+.billing h2 {
+  color: var(--Grey, #9699aa);
+  font-family: Ubuntu;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/* Select config*/
+
+#toogleSwitch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.billing input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.billing label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 2.375rem;
+  height: 1.25rem;
+  background: #022959;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+.billing label:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.billing input:checked + label {
+  background: #022959;
+}
+
+.billing input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+/* Select config*/
+
+/* Select plan end */
+
+/* Addons start */
+
+.addons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.19rem;
+  gap: 1rem;
+}
+
+.typeOfAddon h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  color: var(--Denim, #022959);
+  font-family: "Ubuntu", sans-serif;
+}
+
+h3 {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--Grey, #9699aa);
+  font-family: "Ubuntu", sans-serif;
+}
+
+h4 {
+  font-weight: 400;
+  text-align: right;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--Purple, #483eff);
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* Checkbox config*/
+
+/* The container */
+
+.typeOfAddon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  width: 28.125rem;
+  height: 5.0625rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: var(--White, #fff);
+  border: 1px solid var(--Border-Color, #d6d9e6);
+}
+
+.typeOfAddon:hover {
+  border: 1px solid var(--Purple, #483eff);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.81rem;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.infoOdAddon {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 367px;
+}
+
+.infoOdAddon div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.44rem;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  border-radius: 3px;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+  background-color: #eee;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #483eff;
+  border-radius: 3px;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  display: none;
+  position: relative;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: flex;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Addons end */
+
+/* Summary start */
+
+.chosenPlan {
+  height: auto;
+  flex-shrink: 0;
+  width: 28.125rem;
+  margin-top: 2.19rem;
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  background: var(--Very-Light-Grey, #f8f9ff);
+}
+
+.total {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 28.125rem;
+  height: 1.375rem;
+  margin-top: 1.5rem;
+  padding: 0.0625rem 0rem;
+  gap: 13rem;
+  flex-shrink: 0;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--Grey, #9699aa);
+  font-family: "Ubuntu", sans-serif;
+}
+
+.total span {
+  font-weight: 700;
+  text-align: right;
+  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  color: var(--Purple, #483eff);
+  font-family: "Ubuntu", sans-serif;
+}
+
+#divisor {
+  flex-shrink: 0;
+  opacity: 0.2043;
+  width: 25.125rem;
+  height: 0.0625rem;
+  margin: 1rem 0rem 1rem 0rem;
+  background: var(--Grey, #9699aa);
+}
+
+.c_p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.c_a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.c_a span {
+  color: var(--Denim, #022959);
+  text-align: right;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem; /* 142.857% */
+}
+
+.c_p span {
+  color: var(--Denim, #022959);
+  text-align: right;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25rem; /* 125% */
+}
+
+/* Summary end */
+
+.thankYou {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.thankYou p {
+  margin-top: 0;
 }
 
 .attribution {
